@@ -1,0 +1,27 @@
+{
+  "name": "protractor-typescript-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosquijano/protractor-typescript-automation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlosquijano/protractor-typescript-automation/issues"
+  },
+  "homepage": "https://github.com/carlosquijano/protractor-typescript-automation#readme",
+  "devDependencies": {
+    "@types/jasmine": "^3.3.9",
+    "@types/node": "^11.9.5",
+    "protractor": "^5.4.2",
+    "tslint": "^5.13.0",
+    "typescript": "^3.3.3333"
+  }
+}
