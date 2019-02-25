@@ -4,7 +4,10 @@
   "description": "Template for TypeScript projects that uses Protractor",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc -p ./",
+    "lint": "tslint --project tsconfig.json --config tslint.json 'e2e/**/*.ts' --fix",
+    "e2e" : "npm run build && npm run lint && protractor ./build/protractor.conf.js",
+    "test": "npm run e2e"
   },
   "repository": {
     "type": "git",
