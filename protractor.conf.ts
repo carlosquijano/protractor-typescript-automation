@@ -5,11 +5,12 @@ export let config: Config = {
         'browserName': 'chrome'
     },
     framework: 'jasmine',
-    specs: ['./specs/**/*spec.ts'],
+    specs: ['./e2e/specs/**/*.spec.js'],
     jasmineNodeOpts: {
         defaultTimeoutInterval: 90000
     },
     onPrepare: () => {
+        require('jasmine-expect');
         let globals = require('protractor');
         let browser = globals.browser;
         browser.manage().window().maximize();
