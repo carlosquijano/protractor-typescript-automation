@@ -22,7 +22,7 @@ export class WebDriverHubHomePage {
     /**
      * Gets the server info banner element.
      */
-    getServerInfo(): any {
+    getServerInfo() {
         return element(by.css('.server-info'));
     }
 }

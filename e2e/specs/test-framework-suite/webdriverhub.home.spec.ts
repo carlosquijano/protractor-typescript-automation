@@ -18,14 +18,14 @@ describe(TestSuites.frameworkSuite, () => {
 
         // Step 1 -------------------------------------------------------------
         stepLogger.stepInit(1, 'Expect title to be `WebDriver Hub`');
-        let subject = await webDriverHubHome.getPageTitle();
+        const subject = await webDriverHubHome.getPageTitle();
         expect(subject).toEqual("WebDriver Hub");
 
         // Step 2 -------------------------------------------------------------
         stepLogger.stepInit(2, 'Expect server info to be present and valid');
-        let serverInfo = await webDriverHubHome.getServerInfo().getText();
+        const serverInfo = await webDriverHubHome.getServerInfo().getText();
         expect(serverInfo).toBeNonEmptyString();
-        stepLogger.info(`- Server info ${serverInfo}`);
+        stepLogger.debug(`- Server info '${serverInfo}'`);
 
     });
 });

@@ -2,7 +2,7 @@ import {createLogger, format, transports} from 'winston'
 export class Logger {
     
     private static logger = createLogger({
-        level: 'info',
+        level: 'debug',
         format: format.simple(),
         transports: [
             new transports.Console()
@@ -11,6 +11,10 @@ export class Logger {
 
     static info(message : string) {
         this.logger.info(message);
+    }
+
+    static debug(message : string) {
+        this.logger.debug(message);
     }
 
     static step(stepId : number, message : string) {
