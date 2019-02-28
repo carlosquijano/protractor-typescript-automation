@@ -1,13 +1,18 @@
 import { Config } from 'protractor';
+
+let commonSpecReporter = require('./utils/spec.reporter').commonSpecReporter;
+
 export let config: Config = {
+    framework: 'jasmine',
+    jasmineNodeOpts: {
+        defaultTimeoutInterval: 90000,
+        print: function() {}
+    },
     seleniumAddress: 'http://localhost:4444/wd/hub',
+    baseUrl: 'http://localhost:4444',
+    specs: ['./e2e/specs/**/*.spec.js'],
     capabilities: {
         'browserName': 'chrome'
-    },
-    framework: 'jasmine',
-    specs: ['./e2e/specs/**/*.spec.js'],
-    jasmineNodeOpts: {
-        defaultTimeoutInterval: 90000
     },
     onPrepare: () => {
         require('jasmine-expect');
@@ -15,5 +20,6 @@ export let config: Config = {
         let browser = globals.browser;
         browser.manage().window().maximize();
         browser.manage().timeouts().implicitlyWait(5000);
+        jasmine.getEnv().addReporter(commonSpecReporter)
     }
 }

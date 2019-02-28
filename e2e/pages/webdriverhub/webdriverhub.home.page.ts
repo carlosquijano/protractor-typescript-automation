@@ -1,15 +1,16 @@
 import {browser, element, by} from 'protractor';
+import { BasePage } from '../base.page';
 
-export class WebDriverHubHomePage {
+export class WebDriverHubHomePage extends BasePage {
 
-    private readonly pageUrl = 'http://localhost:4444/wd/hub/static/resource/hub.html';
+    private readonly pageUrl = '/wd/hub/static/resource/hub.html';
 
     /**
      * Gets the page from the `browser` object.
      */
     get() {
         browser.waitForAngularEnabled(false);
-        browser.driver.get(this.pageUrl);
+        this.navigateTo(this.pageUrl);
     }
 
     /**
