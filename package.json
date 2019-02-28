@@ -4,33 +4,29 @@
   "description": "Template for TypeScript projects that uses Protractor",
   "main": "index.js",
   "scripts": {
-    "build": "tsc --project tsconfig.json",
     "lint": "tslint --project tsconfig.json --config tslint.json 'e2e/**/*.ts' --fix",
-    "e2e": "npm run build && npm run lint && protractor ./build/protractor.conf.js",
+    "build": "tsc --project tsconfig.json && npm run lint",
+    "e2e": "npm run build && protractor ./build/protractor.conf.js",
     "test": "npm run e2e"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/carlosquijano/protractor-typescript-automation.git"
   },
-  "keywords": [
-    "protractor",
-    "typescript"
-  ],
+  "keywords": ["protractor", "typescript"],
   "author": "CQ",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/carlosquijano/protractor-typescript-automation/issues"
   },
-  "homepage": "https://github.com/carlosquijano/protractor-typescript-automation#readme",
-  "unmockedModulePathPatterns": [
-    "jasmine-expect"
-  ],
+  "homepage": "https://github.com/carlosquijano/protractor-typescript-automation",
+  "unmockedModulePathPatterns": ["jasmine-expect"],
   "devDependencies": {
     "@types/jasmine": "^3.3.9",
     "@types/jasmine-expect": "^3.8.1",
     "@types/node": "^11.9.5",
     "jasmine-expect": "^4.0.1",
+    "jasmine-spec-reporter": "^4.2.1",
     "protractor": "^5.4.2",
     "tslint": "^5.13.0",
     "typescript": "^3.3.3333",

@@ -1,5 +1,6 @@
-import {createLogger, format, transports} from 'winston'
-export class Logger {
+import {createLogger, format, transports} from 'winston';
+
+export class StepLogger {
     
     private static logger = createLogger({
         level: 'debug',
