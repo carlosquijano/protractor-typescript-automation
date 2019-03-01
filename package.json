@@ -1,5 +1,5 @@
 {
-  "name": "protractor-typescript-automation",
+  "name": "protractor-typescript-template",
   "version": "0.1.0",
   "description": "Template for TypeScript projects that uses Protractor",
   "main": "index.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/carlosquijano/protractor-typescript-automation.git"
+    "url": "git+https://github.com/carlosquijano/protractor-typescript-template.git"
   },
   "keywords": ["protractor", "typescript"],
   "author": "CQ",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/carlosquijano/protractor-typescript-automation/issues"
+    "url": "https://github.com/carlosquijano/protractor-typescript-template/issues"
   },
-  "homepage": "https://github.com/carlosquijano/protractor-typescript-automation",
+  "homepage": "https://github.com/carlosquijano/protractor-typescript-template",
   "unmockedModulePathPatterns": ["jasmine-expect"],
   "devDependencies": {
     "@types/jasmine": "^3.3.9",

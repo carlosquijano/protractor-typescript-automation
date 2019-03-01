@@ -1,4 +1,4 @@
-# protractor-typescript-automation
+# protractor-typescript-template
 Template for [TypeScript](https://www.typescriptlang.org/) projects that uses [Protractor](http://www.protractortest.org/#/).
 
 ## Project Features
@@ -17,7 +17,6 @@ Template for [TypeScript](https://www.typescriptlang.org/) projects that uses [P
 ## Run E2E tests:
 * `npm run test` or `npm run e2e` - Run end to end tests. Defaults to using Chrome browser.
 * `tsc` then `protractor build/protractor.conf.js --params.baseUrl=http://localhost`.
-
 
 Feel free to modify and use it for your own purposes with no restrictions.
 Based on Protractor team's [Typescript Protractor Project Example](https://github.com/chai-jay/protractor-typescript-example/)

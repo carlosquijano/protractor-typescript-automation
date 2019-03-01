@@ -26,5 +26,5 @@ export class StepLogger {
     static stepInit(id : number, title : string) {
         this.step(id, title);
     }
-    
+  
 }
