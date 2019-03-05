@@ -1,4 +1,4 @@
-# protractor-typescript-automation
+# protractor-typescript-template
 Template for [TypeScript](https://www.typescriptlang.org/) projects that uses [Protractor](http://www.protractortest.org/#/).
 
 ## Project Features
@@ -7,6 +7,7 @@ Template for [TypeScript](https://www.typescriptlang.org/) projects that uses [P
 * Includes Jasmine extras: Jasmine Matchers + Jasmine Spec Reporter
 * Includes Reporting capabilities: Allure Reports
 * Makes use of page objects
+* Makes use of logging with winston
 
 ## Setup:
 * Install [Node](http://nodejs.org) (v6.x.x or later)

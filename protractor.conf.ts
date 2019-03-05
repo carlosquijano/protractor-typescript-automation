@@ -6,6 +6,7 @@ export let config: Config = {
     framework: 'jasmine',
     jasmineNodeOpts: {
         defaultTimeoutInterval: 90000,
+        showColors: true,
         print: function() {}
     },
     seleniumAddress: 'http://localhost:4444/wd/hub',
