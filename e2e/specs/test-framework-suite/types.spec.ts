@@ -1,10 +1,9 @@
-
 import { TestSuites } from '../suites';
 import { StepLogger } from '../../../utils/step.logger'
 
 describe(TestSuites.frameworkSuite, () => {
 
-    it('defines types correctly', () => {
+    it('defines types correctly', async () => {
         // Step 1 -------------------------------------------------------------
         StepLogger.stepInit(1, 'Expect types to be defined correctly');
         expect(new Date(2)).toBeAfter(new Date(1));
@@ -86,12 +85,15 @@ describe(TestSuites.frameworkSuite, () => {
         expect('abc').toStartWith('ab');
     });
     
-    it('defines errors correctly', () => {
+    it('defines errors correctly', async () => {
         // Step 1 -------------------------------------------------------------
-        StepLogger.stepInit(1, 'Expect errors to be thrown correctly');  
+        StepLogger.stepInit(1, 'Expect throw to throw any error');  
         expect(() => {
             throw new Error('');
         }).toThrowAnyError();
+        
+        // Step 2 -------------------------------------------------------------
+        StepLogger.stepInit(2, 'Expect throw to throw error of type `Error`');  
         expect(() => {
             throw new Error('');
         }).toThrowErrorOfType('Error');
