@@ -23,9 +23,13 @@
     "url": "https://github.com/carlosquijano/protractor-typescript-template/issues"
   },
   "homepage": "https://github.com/carlosquijano/protractor-typescript-template",
+<<<<<<< HEAD
   "unmockedModulePathPatterns": [
     "jasmine-expect"
   ],
+=======
+  "unmockedModulePathPatterns": ["jasmine-expect"],
+>>>>>>> e6150bf1f20927c65b9cd5aa29a026b2b877a49d
   "devDependencies": {
     "@types/jasmine": "^3.3.9",
     "@types/jasmine-expect": "^3.8.1",

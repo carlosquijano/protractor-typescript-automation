@@ -19,6 +19,5 @@ Template for [TypeScript](https://www.typescriptlang.org/) projects that uses [P
 * `npm run test` or `npm run e2e` - Run end to end tests. Defaults to using Chrome browser.
 * `tsc` then `protractor build/protractor.conf.js --params.baseUrl=http://localhost`.
 
-
 Feel free to modify and use it for your own purposes with no restrictions.
 Based on Protractor team's [Typescript Protractor Project Example](https://github.com/chai-jay/protractor-typescript-example/)
