@@ -1,42 +1,38 @@
-import { WebDriverHubHomePage } from "./webdriverhub.home.page";
-import { BaseHelper } from "../../helpers/base.helper";
 import { StepLogger } from "../../../utils/step.logger";
+import { BaseHelper } from "../../helpers/base.helper";
+import { WebDriverHubHomePage } from "./webdriverhub.home.page";
 
 export class WebDriverHuhHomeHelper extends BaseHelper {
 
-    static async openCreateSessionDialog() {
-        return this.clickElement(WebDriverHubHomePage.createSessionButton).then(() => {
-            StepLogger.debug('`Create Session` dialog opened');
-        });
+    public static async openCreateSessionDialog() {
+        StepLogger.debug("`Create Session` dialog opened");
+        return this.clickElement(WebDriverHubHomePage.createSessionButton);
     }
 
-    static async closeCreateSessionDialog() {
-        return this.clickElement(WebDriverHubHomePage.cancelButton).then(() => {
-            StepLogger.debug('`Create Session` dialog closed by cancel');
-        });
+    public static async closeCreateSessionDialog() {
+        StepLogger.debug("`Create Session` dialog closed by cancel");
+        return this.clickElement(WebDriverHubHomePage.cancelButton);
     }
 
-    static async verifyCreateSessionDialogIsDisplayed() {
+    public static async verifyCreateSessionDialogIsDisplayed() {
         return this.waitForElementToBeVisible(WebDriverHubHomePage.createSessionDialog);
     }
 
-    static async verifyDeleteSessionDialogIsDisplayed() {
+    public static async verifyDeleteSessionDialogIsDisplayed() {
         return this.waitForElementToBeVisible(WebDriverHubHomePage.createSessionDialog);
     }
 
-    static async selectChromeInCreateSessionDialog() {
-        return this.clickElement(WebDriverHubHomePage.chromeBrowserOption).then(() => {
-            StepLogger.debug('`chromeBrowserOption` clicked');
-        });
+    public static async selectChromeInCreateSessionDialog() {
+        StepLogger.debug("`chromeBrowserOption` clicked");
+        return this.clickElement(WebDriverHubHomePage.chromeBrowserOption);
     }
 
-    static async verifyAtLeastOneBrowserSessionAvailableInContainer() {
-        this.waitForElementToBeVisible(WebDriverHubHomePage.sessionTabBar).then(() => {
-            expect(WebDriverHubHomePage.sessionAllTabs.count()).toBeGreaterThan(0);
-        });
-    }
-
-    static async refreshSessions() {
+    public static async refreshSessions() {
         return WebDriverHuhHomeHelper.clickElement(WebDriverHubHomePage.refreshSessionButton);
+    }
+
+    public static async verifyAtLeastOneBrowserSessionAvailableInContainer() {
+        await this.waitForElementToBeVisible(WebDriverHubHomePage.sessionTabBar);
+        expect(WebDriverHubHomePage.sessionAllTabs.count()).toBeGreaterThan(0);
     }
 }
