@@ -1,12 +1,11 @@
-import { DisplayProcessor, SpecReporter } from 'jasmine-spec-reporter';
-import SuiteInfo = jasmine.SuiteInfo;
+import {SpecReporter} from "jasmine-spec-reporter";
 
-export let commonSpecReporter = new SpecReporter({
+export const commonSpecReporter = new SpecReporter({
     spec: {
-        displayStacktrace : true,
-        displayFailed : true,
-        displaySuccessful : true,
-        displayPending : true,
-        displayDuration : true
-    }
+        displayDuration: true,
+        displayFailed: true,
+        displayPending: true,
+        displayStacktrace: true,
+        displaySuccessful: true,
+    },
 });

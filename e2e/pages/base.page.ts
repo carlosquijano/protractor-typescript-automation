@@ -1,25 +1,29 @@
-import { browser, element, by, ExpectedConditions } from 'protractor';
+import {browser} from 'protractor';
 
 /**
  * Class representing generic page.
- * Methods/properties for global elements should go here. 
- * 
+ * Methods/properties for global elements should go here.
+ *
  * @export
  * @class BasePage
  */
 export class BasePage {
 
-  constructor(public isNewNotificationFeatureClosed: boolean = false) {}
-
   /**
-   * Navigates browser to a page using baseUrl from params passed in. 
+   * Navigates browser to a page using baseUrl from params passed in.
    * Should use relative URL (eg '/home.jsp').
-   * 
+   *
    * @param {string} relativeUrl Path of URL after the host (eg '/home.jsp').
    * @memberof BasePage
    */
-  static navigateTo(relativeUrl: string) {
+  public static navigateTo(relativeUrl: string) {
       browser.driver.get(browser.baseUrl + relativeUrl);
   }
+
+  static get pageTitle() {
+        return browser.driver.getTitle();
+  }
+
+  constructor(public isNewNotificationFeatureClosed: boolean = false) {}
 
 }

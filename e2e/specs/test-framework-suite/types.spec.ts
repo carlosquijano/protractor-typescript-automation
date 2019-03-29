@@ -87,13 +87,13 @@ describe(TestSuites.frameworkSuite, () => {
 
     it("defines errors correctly", async () => {
         // Step 1 -------------------------------------------------------------
-        StepLogger.stepInit(1, "Expect throw to throw any error");  
+        StepLogger.stepInit(1, "Expect throw to throw any error");
         expect(() => {
             throw new Error("");
         }).toThrowAnyError();
 
         // Step 2 -------------------------------------------------------------
-        StepLogger.stepInit(2, "Expect throw to throw error of type `Error`");  
+        StepLogger.stepInit(2, "Expect throw to throw error of type `Error`");
         expect(() => {
             throw new Error("");
         }).toThrowErrorOfType("Error");

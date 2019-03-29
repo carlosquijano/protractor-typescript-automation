@@ -1,17 +1,12 @@
 import {browser, by, element} from "protractor";
 import { BasePage } from "../base.page";
+import { WebDriverHubConstants } from "./webdriverhub.constants";
 
 export class WebDriverHubHomePage extends BasePage {
 
-    public static readonly pageUrl = "/wd/hub/static/resource/hub.html";
-
     public static get() {
         browser.waitForAngularEnabled(false);
-        this.navigateTo(this.pageUrl);
-    }
-
-    static get pageTitle() {
-        return browser.driver.getTitle();
+        this.navigateTo(WebDriverHubConstants.pageUrl);
     }
 
     static get serverInfo() {
@@ -19,11 +14,11 @@ export class WebDriverHubHomePage extends BasePage {
     }
 
     static get createSessionButton() {
-        return element(by.buttonText("Create Session"));
+        return element(by.buttonText(WebDriverHubConstants.buttonLabels.createSession));
     }
 
     static get refreshSessionButton() {
-        return element(by.buttonText("Refresh Sessions"));
+        return element(by.buttonText(WebDriverHubConstants.buttonLabels.refreshSession));
     }
 
     static get createSessionDialog() {
@@ -31,11 +26,11 @@ export class WebDriverHubHomePage extends BasePage {
     }
 
     static get deleteSessionButton() {
-        return element(by.buttonText("Delete Session"));
+        return element(by.buttonText(WebDriverHubConstants.buttonLabels.deleteSession));
     }
 
     static get createSessionCancel() {
-        return element(by.buttonText("cancel"));
+        return element(by.buttonText(WebDriverHubConstants.buttonLabels.cancel));
     }
 
     static get sessionTabBar() {
@@ -59,10 +54,10 @@ export class WebDriverHubHomePage extends BasePage {
     }
 
     static get okButton() {
-        return element(by.name("ok"));
+        return element(by.name(WebDriverHubConstants.buttonLabels.ok));
     }
 
     static get cancelButton() {
-        return element(by.name("cancel"));
+        return element(by.name(WebDriverHubConstants.buttonLabels.cancel));
     }
 }

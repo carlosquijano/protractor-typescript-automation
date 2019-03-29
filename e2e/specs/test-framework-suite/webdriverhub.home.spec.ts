@@ -31,7 +31,7 @@ describe(TestSuites.frameworkSuite, () => {
         StepLogger.stepInit(1, "Click `Create Session` dialog");
         await WebDriverHuhHomeHelper.openCreateSessionDialog();
         await WebDriverHuhHomeHelper.verifyCreateSessionDialogIsDisplayed();
-        expect(WebDriverHubHomePage.createSessionDialog.isDisplayed).toBeTruthy;
+        expect(await WebDriverHubHomePage.createSessionDialog.isDisplayed()).toBeTruthy();
 
         // Step 2 -------------------------------------------------------------
         StepLogger.stepInit(2, "Verify browser list select option");
@@ -40,7 +40,7 @@ describe(TestSuites.frameworkSuite, () => {
         // Step 3 -------------------------------------------------------------
         StepLogger.stepInit(3, "Exit `Create Session` dialog");
         await WebDriverHuhHomeHelper.closeCreateSessionDialog();
-        expect(WebDriverHubHomePage.createSessionDialog.isDisplayed).toBeFalsy;
+        expect(await WebDriverHubHomePage.createSessionDialog.isDisplayed()).toBeFalsy();
 
     });
 });
